@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import { LogIn, UserPlus } from "lucide-react";
 
-const API = "http://localhost:5005/api";
+const API = import.meta.env.VITE_API_URL || "http://localhost:5005/api";
 
 function AuthLayout({ children }) {
   return (

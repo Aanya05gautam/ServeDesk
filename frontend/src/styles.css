@@ -156,3 +156,42 @@ tr:hover td { background: var(--bg-tertiary); }
 .detailGrid b { font-size: 15px; color: var(--text-primary); font-weight: 500; }
 
 .statusActions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .hero h1 { font-size: 48px; }
+  .featuresGrid { grid-template-columns: 1fr 1fr; padding: 0 20px; }
+  .statsGrid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  /* Layout adjustments */
+  .appLayout { flex-direction: column; overflow-y: auto; height: auto; }
+  .sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
+  .sidebarNav { padding: 10px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .mainContent { overflow-y: visible; min-height: 100vh; }
+  
+  /* Landing page */
+  .landingNav { flex-direction: column; gap: 12px; }
+  .hero h1 { font-size: 36px; }
+  .hero p { font-size: 16px; }
+  .featuresGrid { grid-template-columns: 1fr; }
+  
+  /* Auth */
+  .authContainer { padding: 10px; }
+  .authCard { padding: 24px; }
+  
+  /* Topbar */
+  .topbar { flex-direction: column; align-items: flex-start; gap: 16px; padding: 16px 20px; }
+  .overviewTab { padding: 20px; }
+  .statsGrid { grid-template-columns: 1fr; }
+  
+  /* Dashboard internal items */
+  .sectionHeader { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .detailGrid { grid-template-columns: 1fr; }
+  .modalContent { padding: 20px; }
+  
+  /* Make tables responsive */
+  .tableContainer { border: 0; box-shadow: none; border-radius: 0; }
+  table { display: block; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+}
