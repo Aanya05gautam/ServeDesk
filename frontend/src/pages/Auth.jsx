@@ -3,7 +3,10 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import { LogIn, UserPlus } from "lucide-react";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:5005/api";
+let rawApi = import.meta.env.VITE_API_URL || "http://localhost:5005/api";
+if (rawApi.endsWith('/')) rawApi = rawApi.slice(0, -1);
+if (!rawApi.endsWith('/api')) rawApi += '/api';
+const API = rawApi;
 
 function AuthLayout({ children }) {
   return (
