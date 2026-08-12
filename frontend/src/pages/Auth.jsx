@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import { LogIn, UserPlus } from "lucide-react";
 
-const API = "https://serve-deskbackend.vercel.app/api";
+const API = "http://localhost:5005/api";
 
 function AuthLayout({ children }) {
   return (
