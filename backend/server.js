@@ -70,7 +70,7 @@ app.post("/api/auth/login", async (req, res) => {
       user: { id: user.id, name: user.name, email: user.email, role: user.role }
     });
   } catch (error) {
-    res.status(500).json({ message: "Server error" });
+    res.status(500).json({ message: "Server error", detail: error.message || error.toString() });
   }
 });
 
