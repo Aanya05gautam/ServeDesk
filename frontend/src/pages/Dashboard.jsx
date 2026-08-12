@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { LogOut, Ticket, Users, LayoutDashboard, Plus, Search, MessageSquare, X, BookOpen, ChevronRight, Phone, Mail, Info } from "lucide-react";
 
-const API = "http://localhost:5005/api";
+const API = "https://serve-deskbackend.vercel.app/api";
 
 function Badge({ value }) {
   const cls = value.toLowerCase().replaceAll(" ", "-");
